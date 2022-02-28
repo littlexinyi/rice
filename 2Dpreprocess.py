@@ -3,6 +3,9 @@ import numpy as np
 from PIL import Image,ImageEnhance
 import os
 
+
+#
+
 def gaussian_blur_demo(a,image):
     dst = cv.GaussianBlur(image, (15,15), 0)
     cv.imwrite('./image/blur/'+str(a)+'_gaussian_blur.png', dst)
@@ -84,3 +87,5 @@ if __name__ == '__main__':
     chalkiness_rate = black_pixel / white_pixel
     # print('chalkiness rate:{:.2f}%'.format(black_pixel/white_pixel*100))
     np.savetxt('./ChalkinessRate.txt', [chalkiness_rate])
+
+
